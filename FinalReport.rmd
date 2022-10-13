@@ -26,10 +26,12 @@ A new  preventative aids drug (triUmpsal) is under test in clinical trials. Cons
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed, for example sub-setting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
-1. Is the vaccine effective for drug users? 2. Is the the vaccine effective for women?
+1. Is the vaccine effective for drug users? 
 
 $H_0$: The vaccine is not effective for drug users.  
-$H_A$: The vaccine is effective for drug users.  
+$H_A$: The vaccine is effective for drug users.
+
+2. Is the the vaccine effective for women?
 
 $H_0$: The vaccine is not effective for females.  
 $H_A$: The vaccine is effective for females.  
@@ -76,7 +78,7 @@ rowPerc(tablef)
 colPerc(tablef)
 ```
 This chart shows that the females that received the placebo which were
-41.18%, got infected, compared to 58.82% who did receive the vaccine.Females who received the vaccine are more susceptible to contracting aids.
+41.18%, got infected, compared to 58.82% who did receive the vaccine. Females who received the vaccine are more susceptible to contracting aids.
 
 Drug Users
 ```{r}
@@ -114,5 +116,9 @@ fisher.test(tableIV)
 
 Report on both Drug Users and Females.  Be sure to include the odds for both groups.
 -->
-The null hypothesis is rejected due to the p-value being less than 0.05, which is 0.0000000423 as shown in the fisher test. The is significant difference between drug users and women for those who get the vaccine and contracted AIDS.
+ The is significant difference between drug users and women for those who get the vaccine and contracted AIDS. 
+
+1. The vaccine is more effective for the drug users, showing that they are less likely to get infected with AIDS.The null hypothesis is rejected due to the p-value being less than 0.05, which is 0.0000000423 as shown in the fisher test.
+
+2. Women who received the vaccine did have an increase is getting infected with AIDS, versus women who received the placebo. Per the chi square test the p-value is 0, therefore the null hypothesis is rejected as well.
  
