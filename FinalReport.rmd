@@ -73,9 +73,9 @@ The vaccines shows to be effective with the drug users, which about 25% of them 
 Females
 
 ```{r}
-tablef <- xtabs(~infected + treatment, data=females)
-rowPerc(tablef)
-colPerc(tablef)
+tableF <- xtabs(~infected + treatment, data=females)
+rowPerc(tableF)
+colPerc(tableF)
 ```
 This chart shows that the females that received the placebo which were
 41.18%, got infected, compared to 58.82% who did receive the vaccine. Females who received the vaccine are more susceptible to contracting aids.
@@ -94,9 +94,9 @@ Among drug users, those who received the placebo were 75.71% of them contracted 
 
 Females
 ```{r}
-chisq.test(tablef)
-chisqtestGC(tablef)
-fisher.test(tablef)
+chisq.test(tableF)
+chisqtestGC(tableF)
+fisher.test(tableF)
 ```
 
 
