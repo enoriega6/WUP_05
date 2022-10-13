@@ -68,9 +68,43 @@ The vaccines shows to be effective with the drug users, which about 25% of them 
 
 <!--Numerical results go here. Use the numerical results to describe the patterns, if any, that exist in the data as focused toward the research question!-->
 
+Females
+
+```{r}
+tablef <- xtabs(~infected + treatment, data=females)
+rowPerc(tablef)
+colPerc(tablef)
+```
+This chart shows that the females that received the placebo which were
+41.18%, got infected, compared to 58.82% who did receive the vaccine.Females who received the vaccine are more susceptible to contracting aids.
+
+Drug Users
+```{r}
+tableIV<- xtabs(~infected + treatment, data=IVDrugUsers)
+rowPerc(tableIV)
+colPerc(tableIV)
+```
+Among drug users, those who received the placebo were 75.71% of them contracted aids, compared to those who received the vaccine,24.29% got infected with aids. So far this is showing that the vaccine is more effective towards those who are drug users.  
+
 ## Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfies the assumptions and is appropriate to answer the research question!-->
+
+Females
+```{r}
+chisq.test(tablef)
+chisqtestGC(tablef)
+fisher.test(tablef)
+```
+
+
+
+IV Drug Users
+```{r}
+chisq.test(tableIV)
+chisqtestGC(tableIV)
+fisher.test(tableIV)
+```
 
 
   
@@ -80,5 +114,5 @@ The vaccines shows to be effective with the drug users, which about 25% of them 
 
 Report on both Drug Users and Females.  Be sure to include the odds for both groups.
 -->
-
+The null hypothesis is rejected due to the p-value being less than 0.05, which is 0.0000000423 as shown in the fisher test. The is significant difference between drug users and women for those who get the vaccine and contracted AIDS.
  
